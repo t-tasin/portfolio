@@ -257,8 +257,8 @@ export const research = [
       "Obstacle Avoidance",
     ],
     links: {
-      paper: "portfolio/public/documents/ksaifullah_multiAgent.pdf",
-      // github: "#", // Add your GitHub repo link here if available
+      paper: "/documents/ksaifullah_multiAgent.pdf",
+      github: "#", // Add your GitHub repo link here if available
     },
   },
   {
