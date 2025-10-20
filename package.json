@@ -11,6 +11,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "dependencies": {
     "@types/matter-js": "^0.20.2",
     "@types/node": "^24.8.1",
