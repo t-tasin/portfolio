@@ -93,21 +93,7 @@ export const skills = {
 };
 
 export const experience = [
-  {
-    title: "IT Specialist",
-    company: "The College of Wooster",
-    location: "Wooster, OH",
-    period: "Sept 2021 - Present",
-    type: "Full-time (Promoted from Student Tech Assistant - July 2025)",
-    description: "Promoted to full-time IT Specialist role supporting campus-wide technology infrastructure and cybersecurity initiatives.",
-    achievements: [
-      "Automated software patch deployment across 200+ domain-bound lab computers using PowerShell scripts, reducing update time significantly",
-      "Resolved over 500 individual tickets with 90% satisfaction rate by delivering accurate troubleshooting for software issues",
-      "Developed training workshops for 200+ university students and staff on cybersecurity best practices, resulting in 40% reduction in phishing incidents",
-    ],
-    technologies: ["PowerShell", "Active Directory", "Windows Server", "ServiceNow"],
-  },
-  {
+    {
     title: "Software Engineer Intern",
     company: "Schneider Electric",
     location: "Remote",
@@ -121,6 +107,20 @@ export const experience = [
       "Ran experiments and demonstrations; presented trade-offs, limitations, and integration recommendations to Data Science leadership team",
     ],
     technologies: ["Python", "LlamaIndex", "AutoGen", "Jupyter Notebook", "LLM Frameworks"],
+  },
+  {
+    title: "IT Specialist",
+    company: "The College of Wooster",
+    location: "Wooster, OH",
+    period: "Sept 2021 - Present",
+    type: "Full-time (Promoted from Student Tech Assistant - July 2025)",
+    description: "Promoted to full-time IT Specialist role supporting campus-wide technology infrastructure and cybersecurity initiatives.",
+    achievements: [
+      "Automated software patch deployment across 200+ domain-bound lab computers using PowerShell scripts, reducing update time significantly",
+      "Resolved over 500 individual tickets with 90% satisfaction rate by delivering accurate troubleshooting for software issues",
+      "Developed training workshops for 200+ university students and staff on cybersecurity best practices, resulting in 40% reduction in phishing incidents",
+    ],
+    technologies: ["PowerShell", "Active Directory", "Windows Server", "ServiceNow"],
   },
   {
     title: "Software Engineer Intern",
