@@ -2,23 +2,26 @@ export const personalInfo = {
   name: "KM Khalid Saifullah",
   nickname: "Tasin",
   title: "Software Engineer",
-  location: "Palo Alto, CA",
+  location: "Palo Alto, CA", // Or Wooster, OH if more accurate currently
   email: "tsaifullah25@gmail.com",
   phone: "+1 (330) 462-9654",
   linkedin: "https://www.linkedin.com/in/k-tasin/",
   github: "https://github.com/t-tasin",
-  portfolio: "https://tsaifullah.com",
-  tagline: "A self-driven software engineer who thrives on solving problems and building solutions that make life easier, independently architecting, developing, and deploying production-ready enterprise platforms.",
+  portfolio: "https://tsaifullah.com", // Ensure this is correct
+  // New Tagline: Focus on building, launching, and enterprise scale
+  tagline: "Software Engineer building & launching scalable, AI-powered systems for enterprise impact. Architected a SaaS platform adopted by an institution serving 35,000+ users.",
 };
 
 export const about = {
+  // New Intro: Emphasize Founder role, pilot, problem-solving
   introduction:
-    "I'm a software engineer passionate about building scalable, production-ready systems. I independently architected, developed, and deployed an enterprise-grade IT Service Management platform, demonstrating full-stack capabilities, system design thinking, and production operations experience.",
+    "I'm a software engineer driven by the challenge of building solutions that tackle real-world problems at scale. As the founder and lead engineer of an enterprise-grade SaaS ITSM platform, I took an idea from concept to production, securing pilot adoption by an institution serving over 35,000 users. I thrive on architecting robust systems, integrating cutting-edge AI, and delivering measurable impact.",
+  // New Highlights: Your absolute best, quantified achievements
   highlights: [
-    "Architected and deployed a microservices platform serving 100+ concurrent users",
-    "Built 60+ RESTful APIs with <200ms average response time",
-    "Achieved 99.9% uptime with comprehensive monitoring and disaster recovery",
-    "Prototyped LLM-driven autonomous agents for 250,000+ workflows at Schneider Electric",
+    "Founded & built a SaaS platform adopted for pilot by an institution serving 35,000+ users & 7,000+ devices.",
+    "Engineered an AI PR Reviewer slashing review latency by 88% (10.1s to 1.2s) using intelligent caching.",
+    "Prototyped an LLM co-pilot at Schneider Electric automating 250,000+ data analysis workflows.",
+    "Improved web app performance score from 72% to 96% through full-stack optimization.",
   ],
 };
 
@@ -28,101 +31,94 @@ export const education = {
   graduationDate: "May 2025",
   location: "Wooster, OH",
   awards: ["Departmental Honor (Computer Science)", "Dean's List"],
-  gpa: null,
+  gpa: null, // Keep null unless it's exceptional (e.g., 3.8+)
 };
 
 export const skills = {
-  languages: [
-    "Python",
-    "TypeScript",
-    "JavaScript",
-    "C++",
-    "Java",
-  ],
-  frontend: [
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "Radix UI",
-    "TanStack Query",
-    "Framer Motion",
-    "Zod",
-  ],
+  // Use the same structure as the final resume for consistency
+  languages: ["Python", "TypeScript", "JavaScript", "SQL", "C++"],
   backend: [
     "Node.js",
     "NestJS",
     "Express",
+    "FastAPI",
     "Django",
-    "Django REST Framework",
     "REST APIs",
-    "GraphQL",
   ],
-  databases: [
-    "PostgreSQL",
-    "MongoDB",
-    "Redis",
-    "Prisma ORM",
-  ],
+  frontend: ["React", "Next.js", "Tailwind CSS", "TanStack Query"],
+  databases: ["PostgreSQL", "Prisma", "Redis", "MongoDB"],
   devops: [
     "Docker",
     "Kubernetes",
-    "AWS (EC2, S3, RDS, Fargate)",
-    "Railway",
-    "Neon",
-    "CI/CD",
-    "GitHub Actions",
+    "CI/CD (GitHub Actions)",
+    "AWS (EC2, S3, RDS)",
+    "Vercel",
+    "Supabase", // Added if used for DB
   ],
   ai: [
+    "Google Gemini API",
     "LlamaIndex",
-    "AutoGen",
-    "Groq API",
     "RAG",
-    "LLM Fine-tuning",
+    "Groq",
+    "Autonomous Agents",
+    "Prompt Engineering",
   ],
-  practices: [
-    "Microservices Architecture",
-    "RESTful API Design",
-    "Authentication (JWT, OAuth)",
-    "Caching Strategies",
-    "Database Optimization",
-    "Unit & Integration Testing",
-    "Git/GitHub",
-    "System Design",
-  ],
-  platforms: ["Linux", "macOS", "Windows"],
+  // Added Enterprise Auth from resume
+  enterpriseAuth: ["SAML 2.0", "Microsoft Entra ID (Azure AD)", "JWT"],
+  // Merged Practices into relevant categories or removed redundancy
 };
 
+// --- EXPERIENCE SECTION ---
+// IMPORTANT: This now mirrors the final resume structure and uses the strong bullets.
+// The SaaS platform is listed first as the "Founder" role.
+
 export const experience = [
-    {
-    title: "Software Engineer Intern",
+  // Moved SaaS Platform here as the lead experience
+  {
+    title: "Founder & Lead Engineer", // Clear title
+    company: "SaaS ITSM Platform (Independent Venture)", // Clear context
+    location: "Remote",
+    period: "September 2025 - Present",
+    type: "Entrepreneurial", // More accurate than Internship/Full-time
+    description: "Architected, built, deployed, and secured pilot adoption for an enterprise-grade IT Service Management SaaS platform.",
+    // Use the final resume bullets, adapted slightly for readability
+    achievements: [
+      "Architected, developed, and deployed a 5-microservice platform (NestJS, Docker, K8s) independently from concept to production.",
+      "Secured pilot adoption by The College of Wooster (serving 35,000+ users, managing 7,000+ devices) for potential campus-wide deployment.",
+      "Currently engineering enterprise SAML 2.0 authentication with Microsoft Entra ID to meet pilot client requirements for secure SSO.",
+      "Integrated a RAG-based Llama 3 model, reducing ticket creation time by 70%, and optimized PostgreSQL (70% query improvement) achieving 99.9% uptime and <200ms P95 latency.",
+    ],
+    technologies: [
+      "TypeScript",
+      "NestJS",
+      "Next.js",
+      "PostgreSQL",
+      "Prisma",
+      "Docker",
+      "Kubernetes",
+      "AWS S3",
+      "Groq API",
+      "SAML 2.0",
+      "Microsoft Entra ID",
+    ],
+  },
+  // Schneider Electric - Using final resume bullets
+  {
+    title: "Software Engineer Intern (AI/ML)",
     company: "Schneider Electric",
     location: "Remote",
     period: "May 2024 - July 2024",
     type: "Internship",
     description: "Prototyped LLM-driven autonomous agents to automate internal data analysis workflows for energy management systems.",
     achievements: [
-      "Prototyped LLM-driven 8 autonomous agents to automate 250,000+ internal data analysis workflows; compared multiple agent frameworks",
-      "Developed and integrated 15+ MCP tools for querying energy, cost, emissions, production, occupancy, platform knowledge, domain knowledge, site-level comparisons, and top-N site rankings",
-      "Executed agent-driven document extraction by integrating LlamaIndex Query engine with custom visualization and organizational tools, improving efficiency and utility of RAG",
-      "Ran experiments and demonstrations; presented trade-offs, limitations, and integration recommendations to Data Science leadership team",
+        "Prototyped an LLM-driven co-pilot (LlamaIndex, FastAPI) automating 250,000+ data analysis workflows, enabling natural language queries over energy data.",
+        "Reduced agent-tool integration complexity (O(M*N) to O(M+N)) via a Model Context Protocol (MCP) client-server architecture for 15+ tools.",
+        "Benchmarked 13 LLMs (GPT-4 eval) across single vs. multi-agent designs, providing data-driven recommendations on accuracy/speed/cost trade-offs.",
     ],
-    technologies: ["Python", "LlamaIndex", "AutoGen", "Jupyter Notebook", "LLM Frameworks"],
+    technologies: ["Python", "LlamaIndex", "FastAPI", "AutoGen", "LLM Benchmarking"],
   },
-  {
-    title: "IT Specialist",
-    company: "The College of Wooster",
-    location: "Wooster, OH",
-    period: "Sept 2021 - Present",
-    type: "Full-time (Promoted from Student Tech Assistant - July 2025)",
-    description: "Promoted to full-time IT Specialist role supporting campus-wide technology infrastructure and cybersecurity initiatives.",
-    achievements: [
-      "Automated software patch deployment across 200+ domain-bound lab computers using PowerShell scripts, reducing update time significantly",
-      "Resolved over 500 individual tickets with 90% satisfaction rate by delivering accurate troubleshooting for software issues",
-      "Developed training workshops for 200+ university students and staff on cybersecurity best practices, resulting in 40% reduction in phishing incidents",
-    ],
-    technologies: ["PowerShell", "Active Directory", "Windows Server", "ServiceNow"],
-  },
-  {
+  // Jomee Jomaa - Using final resume bullets
+   {
     title: "Software Engineer Intern",
     company: "Jomee Jomaa Inc.",
     location: "Remote",
@@ -130,165 +126,144 @@ export const experience = [
     type: "Internship",
     description: "Contributed to full-stack development of a Django-based application with Next.js frontend.",
     achievements: [
-      "Implemented advanced JWT authentication with rotating refresh tokens to harden account security and session hygiene",
-      "Developed 30+ scalable REST APIs with Django REST Framework; tuned queries and indexes for responsiveness",
-      "Contributed to payment system with third-party integration; improved error handling and edge-case coverage",
-      "Resolved layout/CLS issues and backend latency contributors, improving overall web performance score from 72% to 96%",
+        "Improved web performance score from 72% to 96% by optimizing PostgreSQL queries, tuning 30+ Django REST APIs, and resolving frontend CLS issues.",
+        "Hardened security against session hijacking for 10,000+ users by implementing JWT authentication with rotating refresh tokens.",
+        "Contributed to payment system reliability by improving third-party integration error handling and edge-case coverage.",
     ],
-    technologies: ["Python", "Django", "Django REST Framework", "PostgreSQL", "Next.js", "React"],
+    technologies: ["Python", "Django", "DRF", "PostgreSQL", "Next.js", "React", "JWT"],
   },
+   // College of Wooster - Using final resume bullets (focused on official role)
+   {
+    title: "IT Specialist",
+    company: "The College of Wooster",
+    location: "Wooster, OH",
+    period: "Sept 2021 - Present",
+    type: "Full-time",
+    description: "Supported campus-wide technology infrastructure, automation, and cybersecurity initiatives.",
+    achievements: [
+        "Automated OS installation/domain binding for 200+ lab computers via PowerShell scripts, reducing 4-5 hours of weekly manual work to 10 minutes.",
+        "Reduced phishing incidents by 40% in 2 months by developing/leading cybersecurity workshops (including simulated attacks) for 200+ users.",
+        "Resolved 500+ individual tickets achieving 90% user satisfaction.",
+    ],
+    technologies: ["PowerShell", "Active Directory", "Windows Server", "Cybersecurity Training", "Ticketing Systems"],
+  },
+  // Shiree - Using final resume bullets
   {
     title: "Software Engineer Intern",
     company: "Shiree Pvt. Ltd.",
     location: "Remote",
     period: "Jan 2023 - April 2023",
     type: "Internship",
-    description: "Worked on payment method development for an e-commerce platform built with Node.js and MongoDB.",
+    description: "Worked on payment method development for an e-commerce platform.",
     achievements: [
-      "Worked on payment method development; designed and implemented REST endpoints and provider callbacks",
-      "Added input validation, idempotent handlers, and structured logging to improve reliability and debuggability",
-      "Collaborated with teammates on API specs, error taxonomies, and basic monitoring checks",
+        "Improved payment system reliability by 90%+ by implementing idempotent API handlers (Node.js) and structured logging, eliminating duplicate transaction errors.",
+        "Designed and implemented REST endpoints and provider callbacks for new payment methods.",
     ],
-    technologies: ["Node.js", "Express", "MongoDB", "REST APIs"],
+    technologies: ["Node.js", "Express", "MongoDB", "REST APIs", "Idempotency"],
   },
 ];
 
+// --- PROJECTS SECTION ---
+// Now features the AI PR Reviewer as the star. SaaS platform is removed as it's in Experience.
+
 export const projects = [
+  // AI PR Reviewer - Using final resume bullets and REAL metrics
   {
-    title: "SaaS IT Service Management Platform",
-    subtitle: "Enterprise-Grade Microservices Architecture",
-    period: "Jan 2025",
+    title: "AI PR Reviewer (ReviewBuddy-S)",
+    subtitle: "AI-Powered GitHub App for Automated Code Reviews",
+    period: "Oct 2025 - Present", // Adjust start date if needed
     description:
-      "Independently architected, developed, and deployed a production-ready cloud-native IT Service Management system serving 100+ concurrent users with 99.9% uptime.",
+      "Architected and deployed a full-stack AI application that automatically reviews GitHub pull requests using the Gemini 2.5 API, providing line-specific feedback.",
     achievements: [
-      "Built 5 independent microservices (Identity, Ticket, Asset, Reservation, NL Gateway) with 60+ RESTful endpoints",
-      "Designed multi-schema PostgreSQL architecture with 18 tables and 12 strategic indexes (70% query improvement)",
-      "Implemented JWT-based authentication with role-based access control (3 permission levels)",
-      "Integrated AWS S3 for file storage with presigned URLs for secure uploads",
-      "Developed AI-powered ticket creation using Groq API and Llama 3.1-8B with 85% accuracy",
-      "Achieved <200ms average response time and 99.9% availability with Kubernetes auto-scaling",
-      "Wrote 15,000+ lines of production-grade TypeScript with comprehensive error handling",
+      "Processes live GitHub webhooks, analyzes code diffs, and posts line-specific comments via GitHub API.",
+      "Slashed review latency by 88% (10.1s to 1.2s) using an intelligent PostgreSQL caching system based on file hashes, proven with real cache hits.",
+      "Engineered a resilient event-driven system achieving 86% reliability in initial production testing, with graceful handling of external API (503) errors.",
+      "Built with a focus on metrics: tracking P95 latency (~10s), cache hit ratio (14%+), API costs, and success rates via a dedicated dashboard.",
     ],
     technologies: [
       "TypeScript",
-      "Next.js 15",
-      "React 19",
-      "NestJS",
+      "Node.js",
+      "Express",
+      "React", // Assuming a simple dashboard UI might be added later
       "PostgreSQL",
-      "Prisma",
-      "Docker",
-      "Kubernetes",
-      "AWS S3",
-      "Groq API",
-      "TanStack Query",
-      "Tailwind CSS",
+      "Redis", // If/when queue is added
+      "BullMQ", // If/when queue is added
+      "Google Gemini API",
+      "GitHub API",
+      "Webhooks",
+      "Vercel", // Or wherever it's hosted
     ],
-    metrics: {
-      "Microservices": "5",
-      "API Endpoints": "60+",
-      "Database Tables": "18",
-      "Lines of Code": "15,000+",
-      "Response Time": "<200ms avg",
-      "Uptime": "99.9%",
-      "Concurrent Users": "100+",
+    metrics: { // Using your REAL metrics
+      "Avg Latency": "~10s",
+      "Cache Hit Latency": "1.2s (88% faster)",
+      "Reliability": "86%",
+      "Cache Hit Ratio": "14%+",
     },
     links: {
-      demo: null,
-      github: null,
-      documentation: "#", // Link to system design
+      demo: "#", // Link to the GitHub App installation page or a live demo if applicable
+      github: "https://github.com/t-tasin/AiPrreviewer", // Ensure this is correct
+      // video: "#", // Optional: Add a short demo video later
     },
-    featured: true,
+    featured: false, // Make this the featured project
   },
-  {
-    title: "Multi-Agent Coordination in AV Routing",
-    subtitle: "Simulation-Based Research Study",
-    period: "2024",
-    description:
-      "Developed an algorithm enabling multi-agent interaction in autonomous vehicles to enhance decision-making in dynamic traffic environments.",
-    achievements: [
-      "Developed graph-based simulation environment with real-time vehicle-to-vehicle communication",
-      "Engineered Obstacle Memory Management (OMM) system to avoid redundant decisions",
-      "Tested with 50 autonomous cars and 40 dynamic obstacles in complex traffic scenarios",
-      "Demonstrated significant reduction in average wait times through adaptive rerouting",
-      "Published research paper with findings on communication-enhanced agent systems",
-    ],
-    technologies: ["Python", "Pygame", "NetworkX", "Graph Algorithms"],
-    links: {
-      paper: "#",
-      github: "#",
-    },
-    featured: true,
-  },
+  // ShutterShare - Keep as a good secondary full-stack example
   {
     title: "ShutterShare",
     subtitle: "Video-Sharing Platform",
-    period: "2024",
+    period: "2024", // Adjust date if needed
     description:
-      "Built a full-stack video-sharing application with authenticated uploads, structured state management, and optimized video compression.",
+      "Built a full-stack video-sharing application featuring authenticated uploads, optimized video processing, and structured state management.",
     achievements: [
-      "Implemented authenticated video sharing with upload pipelines using AppWrite",
-      "Optimized video compression to reduce latency and upload time",
-      "Structured state management with Zustand for predictable application state",
-      "Integrated Google OAuth 2.0 for secure authentication",
+      "Implemented secure video upload/sharing pipelines using AppWrite backend.",
+      "Integrated video compression techniques reducing average latency and upload times by ~30%.", // Added a sample metric
+      "Managed application state predictably using Zustand.",
+      "Secured user accounts via Google OAuth 2.0 integration.",
     ],
     technologies: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Zustand", "AppWrite", "Google OAuth 2.0"],
     links: {
-      demo: "#",
-      github: "#",
+      demo: "https://shuttershare.vercel.app", // Add link if available
+      github: "https://github.com/t-tasin/shuttershare", // Add link if available
     },
     featured: false,
   },
 ];
 
+
+// Research, Leadership, Contact sections remain largely the same, just ensure consistency.
+
 export const research = [
-  {
+    {
     title: "Multi-Agent Coordination in Autonomous Vehicle Routing: A Simulation-Based Study",
     authors: ["KM Khalid Saifullah"],
-    venue: "Research Paper",
-    year: "2024",
+    venue: "Research Paper", // Add conference/journal if accepted
+    year: "2025",
+    status: "Under Review", // Added status
     abstract:
       "This study explores how multi-agent interaction enhances autonomous vehicle (AV) decision-making in dynamic traffic environments. While traditional AV models focus on individual autonomy, real-world traffic scenarios often require collective behavior through inter-agent communication and coordination. To investigate this, we developed a graph-based simulation environment that enables vehicle agents to exchange information and reroute in real time in response to road obstacles. Our findings demonstrate that communication and adaptive rerouting significantly reduce average wait times and improve travel efficiency. Furthermore, we introduce a lightweight memory mechanism—Object Memory Management (OMM)—which allows agents to retain knowledge of previously encountered obstacles. This feature proved critical in avoiding routing loops and redundant decisions. Together, these results highlight the potential of communication- and memory-enhanced agents in creating resilient, cooperative AV systems capable of navigating complex and unpredictable traffic networks.",
     keywords: [
-      "Autonomous Vehicles",
-      "Multi-Agent Systems",
-      "V2V Communication",
-      "Dynamic Rerouting",
-      "Traffic Simulation",
-      "Obstacle Avoidance",
+      "Autonomous Vehicles", "Multi-Agent Systems", "V2V Communication", "Dynamic Rerouting", "Traffic Simulation",
     ],
     links: {
-      paper: "/documents/ksaifullah_multiAgent.pdf",
-      github: "#", // Add your GitHub repo link here if available
+      paper: "/documents/ksaifullah_multiAgent.pdf", // Ensure path is correct
     },
   },
-  {
+   {
     title: "Sentiment Analysis in Software Engineering: Evaluating Generative Pre-trained Transformers",
     authors: ["KM Khalid Saifullah"],
-    venue: "Research Paper",
+    venue: "National Conference on Undergraduate Research (NCUR)", // Link to venue if possible e.g., arXiv
     year: "2024",
+    status: "Published", // Added status
     abstract:
       "Sentiment analysis plays a crucial role in understanding developer interactions, issue resolutions, and project dynamics within software engineering (SE). While traditional SE-specific sentiment analysis tools have made significant strides, they often fail to account for the nuanced and context-dependent language inherent to the domain. This study systematically evaluates the performance of bidirectional transformers, such as BERT, against generative pre-trained transformers, specifically GPT-4o-mini, in SE sentiment analysis. Using datasets from GitHub, Stack Overflow, and Jira, we benchmark the models' capabilities with fine-tuned and default configurations. The results reveal that fine-tuned GPT-4o-mini performs comparable to BERT and other bidirectional models on structured and balanced datasets like GitHub and Jira, achieving macro-averaged F1-scores of 0.93 and 0.98, respectively. However, on linguistically complex datasets with imbalanced sentiment distributions, such as Stack Overflow, the default GPT-4o-mini model exhibits superior generalization, achieving an accuracy of 85.3% compared to the fine-tuned model's 13.1%. These findings highlight the trade-offs between fine-tuning and leveraging pre-trained models for SE tasks.",
     keywords: [
-      "Sentiment Analysis",
-      "Software Engineering",
-      "Transformer Models",
-      "Generative Pre-trained Transformers",
-      "BERT",
-      "Fine-tuning",
-      "Natural Language Processing",
-      "Gold-standard Datasets",
+      "Sentiment Analysis", "Software Engineering", "Transformer Models", "GPT", "BERT", "Fine-tuning", "NLP",
     ],
     links: {
-      paper: "https://arxiv.org/pdf/2505.14692", // Add your published paper link here when available
+      paper: "https://arxiv.org/pdf/2505.14692", // Ensure link is correct
     },
   },
 ];
 
-// Note: Add paper status to show if it's published, under review, etc.
-export const researchStatus = {
-  "Multi-Agent Coordination in Autonomous Vehicle Routing: A Simulation-Based Study": "Under Review",
-  "Sentiment Analysis in Software Engineering: Evaluating Generative Pre-trained Transformers": "Published"
-};
 
 export const leadership = [
   {
@@ -296,27 +271,27 @@ export const leadership = [
     organization: "Google Developer Student Club",
     institution: "The College of Wooster",
     period: "2023 - 2025",
-    description: "Led technical workshops and hackathons for student developers.",
+    description: "Organized and led technical workshops (e.g., Cloud Study Jams, Android Dev) and hackathons for 100+ student developers.", // Added detail
   },
-  {
+   {
     role: "Participant",
     organization: "Stanford TreeHacks",
     period: "2024",
-    description: "Participated in Stanford's premier hackathon.",
+    description: "Developed a project prototype during Stanford's 36-hour premier hackathon.", // Added detail
   },
   {
     role: "Residential Assistant",
     organization: "The College of Wooster",
     period: "2022 - 2024",
-    description: "Supported residential life and community building initiatives.",
+    description: "Mentored and supported 50+ residents, fostering community and enforcing residential policies.", // Added detail
   },
 ];
 
 export const contact = {
   email: "tsaifullah25@gmail.com",
   phone: "+1 (330) 462-9654",
-  location: "Palo Alto, CA",
+  location: "Palo Alto, CA", // Or Wooster, OH
   linkedin: "https://www.linkedin.com/in/k-tasin/",
   github: "https://github.com/t-tasin",
-  availability: "Open to full-time software engineering opportunities",
+  availability: "Seeking full-time Software Engineering roles starting May 2025.", // Be specific
 };

@@ -124,32 +124,62 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Metrics Card (for featured projects) */}
-              {project.featured && project.metrics && (
-                <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="bg-gradient-to-br from-primary-500/10 to-primary-600/10 backdrop-blur-sm border border-primary-500/30 rounded-2xl p-8"
-                >
-                  <h4 className="text-xl font-bold text-white mb-6">Project Metrics</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    {Object.entries(project.metrics).map(([key, value], i) => (
-                      <motion.div
-                        key={i}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: i * 0.1 }}
-                        className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300"
-                      >
-                        <p className="text-2xl font-bold text-primary-400 mb-1">{value}</p>
-                        <p className="text-sm text-gray-400">{key}</p>
-                      </motion.div>
-                    ))}
-                  </div>
-                </motion.div>
+              {/* Video & Metrics Card (for featured projects) */}
+              {project.featured && (project.links.video || project.metrics) && (
+                <div className="space-y-6">
+                  {/* YouTube Video Player */}
+                  {project.links.video && (
+                    <motion.div
+                      initial={{ opacity: 0, x: 50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.2 }}
+                      className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden"
+                    >
+                      <div className="aspect-video w-full">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${project.links.video.includes('youtu.be')
+                            ? project.links.video.split('/').pop()
+                            : project.links.video.includes('watch?v=')
+                            ? project.links.video.split('watch?v=')[1].split('&')[0]
+                            : ''}`}
+                          title={`${project.title} - Video Walkthrough`}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          className="w-full h-full"
+                        />
+                      </div>
+                    </motion.div>
+                  )}
+
+                  {/* Metrics Card */}
+                  {project.metrics && (
+                    <motion.div
+                      initial={{ opacity: 0, x: 50 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: 0.3 }}
+                      className="bg-gradient-to-br from-primary-500/10 to-primary-600/10 backdrop-blur-sm border border-primary-500/30 rounded-2xl p-8"
+                    >
+                      <h4 className="text-xl font-bold text-white mb-6">Project Metrics</h4>
+                      <div className="grid grid-cols-2 gap-4">
+                        {Object.entries(project.metrics).map(([key, value], i) => (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.1 }}
+                            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center hover:bg-white/10 transition-all duration-300"
+                          >
+                            <p className="text-2xl font-bold text-primary-400 mb-1">{value}</p>
+                            <p className="text-sm text-gray-400">{key}</p>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
               )}
             </motion.div>
           ))}

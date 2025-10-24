@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CheckCircle, Code2, Database, Cloud, Brain } from 'lucide-react';
+import { CheckCircle, Code2, ShieldCheck, Cloud, Brain, SquareDashedBottomCode, SquareDashedMousePointer, Database } from 'lucide-react';
 import { about, education, skills } from '@/data/portfolio';
 
 const fadeInUpVariants = {
@@ -14,10 +14,13 @@ const fadeInUpVariants = {
 } as const;
 
 const skillCategories = [
-  { title: 'Languages', icon: Code2, items: skills.languages, color: 'from-blue-500 to-cyan-500' },
-  { title: 'Databases', icon: Database, items: skills.databases, color: 'from-green-500 to-emerald-500' },
-  { title: 'DevOps & Cloud', icon: Cloud, items: skills.devops, color: 'from-purple-500 to-pink-500' },
-  { title: 'AI/ML', icon: Brain, items: skills.ai, color: 'from-orange-500 to-red-500' },
+  { title: 'Languages', icon: Code2, items: skills.languages ?? [], color: 'from-blue-500 to-cyan-500' },
+  { title: 'Databases', icon: Database, items: (skills as any).databases ?? [], color: 'from-green-500 to-emerald-500' },
+  { title: 'Backend', icon: SquareDashedBottomCode, items: skills.backend ?? [], color: 'from-purple-500 to-pink-500' },
+  { title: 'Frontend', icon: SquareDashedMousePointer, items: skills.backend ?? [], color: 'from-blue-500 to-cyan-500' },
+  { title: 'DevOps & Cloud', icon: Cloud, items: skills.devops ?? [], color: 'from-purple-500 to-pink-500' },
+  { title: 'AI/ML', icon: Brain, items: skills.ai ?? [], color: 'from-blue-500 to-cyan-500' },
+  { title: 'enterpriseAuth:', icon: ShieldCheck, items: skills.enterpriseAuth ?? [], color: 'from-orange-500 to-red-500' },
 ];
 
 export default function About() {
@@ -128,7 +131,7 @@ export default function About() {
                 </div>
                 <h4 className="text-lg font-semibold text-white mb-4">{category.title}</h4>
                 <div className="flex flex-wrap gap-2">
-                  {category.items.map((item, i) => (
+                  {(category.items ?? []).map((item, i) => (
                     <span
                       key={i}
                       className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-gray-300 hover:bg-white/10 hover:text-white transition-all duration-200"
@@ -139,39 +142,6 @@ export default function About() {
                 </div>
               </motion.div>
             ))}
-          </div>
-        </motion.div>
-
-        {/* Additional Skills */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeInUpVariants}
-          className="grid md:grid-cols-2 gap-6"
-        >
-          {/* Frontend */}
-          <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-            <h4 className="text-lg font-semibold text-white mb-4">Frontend</h4>
-            <div className="flex flex-wrap gap-2">
-              {skills.frontend.map((item, i) => (
-                <span key={i} className="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-sm text-blue-400">
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Backend */}
-          <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-            <h4 className="text-lg font-semibold text-white mb-4">Backend</h4>
-            <div className="flex flex-wrap gap-2">
-              {skills.backend.map((item, i) => (
-                <span key={i} className="px-3 py-1 bg-green-500/10 border border-green-500/30 rounded-full text-sm text-green-400">
-                  {item}
-                </span>
-              ))}
-            </div>
           </div>
         </motion.div>
       </div>

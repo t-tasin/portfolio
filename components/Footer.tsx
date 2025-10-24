@@ -70,7 +70,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="pt-8 border-t border-white/10 text-center">
           <p className="text-gray-400 text-sm flex items-center justify-center gap-2">
-            Made with <Heart size={16} className="text-red-500 animate-pulse" /> by {personalInfo.name}
+            {/* Made with <Heart size={16} className="text-red-500 animate-pulse" /> by*/} {personalInfo.name} 
           </p>
           <p className="text-gray-500 text-xs mt-2">
             © {new Date().getFullYear()} All rights reserved.

@@ -70,9 +70,9 @@ export default function Hero() {
             variants={itemVariants}
             className="flex items-center justify-center mb-8"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-300 mr-3">
+            {/* <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-300 mr-3">
               I'm a
-            </h2>
+            </h2> */}
             <Typewriter
               words={['Developer', 'Researcher', 'Problem Solver', 'Software Engineer', 'Builder']}
               className="text-2xl sm:text-3xl md:text-4xl font-semibold"
@@ -87,14 +87,14 @@ export default function Hero() {
             {personalInfo.tagline}
           </motion.p>
 
-          {/* Location */}
+          {/* Location
           <motion.div
             variants={itemVariants}
             className="flex items-center justify-center gap-2 text-gray-400 mb-12"
           >
             <MapPin size={20} className="text-primary-500" />
             <span>{personalInfo.location}</span>
-          </motion.div>
+          </motion.div> */}
 
           {/* CTA Buttons */}
           <motion.div
